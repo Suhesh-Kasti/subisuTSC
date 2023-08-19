@@ -155,14 +155,39 @@ def slownet_cause():
 
 def slownet_more():
     more_slownet='''
-    You should not reset the ONUs with static IP
+    ***You should not reset the ONUs with static IP***
 
     VLAN for IPTV - 1619
     VLAN for ACS - 1991
     VLAN for static IP - 375, 1202, 1810
-    VLAN IDs For Various OLTs
 
-    
+    VLAN IDs For Various OLTs:
+    Anamnagar - 421                     Kirtipur - 1630
+    Balaju - 952                        Lele - 1107
+    Baluwakhani - 1665                  Maharajgunj - 954
+    Baluwatar - 947                     Manbhawan - 1993
+    Baneshwore - 945                    Mhepi - 946
+    Baniyatar - 1130                    Naikap - 520
+    Battisputali - 945                  Narayanthan - 979
+    Bauddha - 953                       New road - 956
+    Bhaisepati - 790                    Pepsicola - 848
+    Buddhanagar - 1791                  Pulchowk - 714
+    Chabahil - 953                      Radheradhe - 957
+    Chapagaun - 1671                    Ramkot - 1662
+    Dallu - 1002                        Ranibari - 1080
+    Dhapasi - 1651                      Sanothimi - 1048
+    Dudhpokhari - 1630                  Satdobato - 1111
+    Ekaltar - 1262                      Soaltee - 825
+    Godawari - 1648                     Sundarijal - 1306
+    Gongabu - 944                       Suryabinayak - 353
+    Gyaneshwore - 947                   Switchatar - 1090
+    Imadol - 1672                       Tachikhel - 950
+    Jarankhu - 1020                     Teku - 1359
+    Jorpati - 321                       Thamel - 946
+    Kamaldi - 419                       Thankot - 520
+    Kamalbinayak - 1675                 Tinkune - 951
+    Kaushaltar - 898                    Tokha - 1130
+
         '''
     output_box.config(state=tk.NORMAL)  # make the widget editable
     output_box.delete('1.0', tk.END)  # clear previous content
@@ -252,14 +277,39 @@ def nonet_cause():
 
 def nonet_more():
     more_nonet='''
-    You should not reset the ONUs with static IP
+   ***You should not reset the ONUs with static IP***
 
     VLAN for IPTV - 1619
     VLAN for ACS - 1991
     VLAN for static IP - 375, 1202, 1810
-    VLAN IDs For Various OLTs
 
-    
+    VLAN IDs For Various OLTs:
+    Anamnagar - 421                     Kirtipur - 1630
+    Balaju - 952                        Lele - 1107
+    Baluwakhani - 1665                  Maharajgunj - 954
+    Baluwatar - 947                     Manbhawan - 1993
+    Baneshwore - 945                    Mhepi - 946
+    Baniyatar - 1130                    Naikap - 520
+    Battisputali - 945                  Narayanthan - 979
+    Bauddha - 953                       New road - 956
+    Bhaisepati - 790                    Pepsicola - 848
+    Buddhanagar - 1791                  Pulchowk - 714
+    Chabahil - 953                      Radheradhe - 957
+    Chapagaun - 1671                    Ramkot - 1662
+    Dallu - 1002                        Ranibari - 1080
+    Dhapasi - 1651                      Sanothimi - 1048
+    Dudhpokhari - 1630                  Satdobato - 1111
+    Ekaltar - 1262                      Soaltee - 825
+    Godawari - 1648                     Sundarijal - 1306
+    Gongabu - 944                       Suryabinayak - 353
+    Gyaneshwore - 947                   Switchatar - 1090
+    Imadol - 1672                       Tachikhel - 950
+    Jarankhu - 1020                     Teku - 1359
+    Jorpati - 321                       Thamel - 946
+    Kamaldi - 419                       Thankot - 520
+    Kamalbinayak - 1675                 Tinkune - 951
+    Kaushaltar - 898                    Tokha - 1130
+
         '''
     output_box.config(state=tk.NORMAL)  # make the widget editable
     output_box.delete('1.0', tk.END)  # clear previous content
@@ -324,7 +374,96 @@ def nologo_more():
 
 def onu_solution():
     the_solution_onu='''
-    Step 1: 
+    Step 1: Goto any browser of your choice and enter the IP address "192.168.1.254" in the URL bar.
+    (Tell the client to type the whole and not use the one in suggestion. Google suggests 192.168.i.254)
+    Step 2:If the client gets redirected to a google search, either tell the clients to type in the IP again or you can use the websites.
+    Every website in that page leads to the 192.168.1.254 in one way or another. You might have to check in your browser how to find the button that leads to that page
+    Step 3: 
+    Username : AdminGPON
+    Password : ALC#FGU
+    Step 4: If the client has logged in using the username and password given at the hind side of the ONU, some of the functionalities may be limited. 
+    The client will not be able to do much than reboot the ONU or change Wi-Fi password.
+
+    ****** What devices are connected to my Wi-Fi ?? *******
+    Status > Home Networking 
+    Step 1: Given below on the right side are all the devices on the network at the moment. The one with inactive states are not active.
+    You may need this tab to find the IP address and MAC address for MAC filtering or Port forwarding.
+
+
+    ****** Changing DNS, DHCP pool, Nokia ONU's IP, Static IP allocation *******
+    Network > LAN
+    Step 1: The Port Mode option are used to change the port's mode to Route mode or Bridged mode.
+    (*Note: Route mode allocates private IP to the device on that port whereas Bridged mode allocates the devices a public address)
+    Step 2: The IPv4 address signifies the IP address of the ONU. 
+    (*Note: If you change this the address you have to input in the URL bar to reach the GPON gateway page changes.)
+    Step 3: The Subnet mask can be used to segregate network. I won't mess with this option unless I absolutely have to and I know what I am doing.
+    (*Note: If you want to learn more about subnetting check out 7second subnetting by professor messer)
+    Step 4: The DHCP Start and End Addresses are as the name suggests the addresses from and to which the devices in the network will be allocated. 
+    Eg. If you choose Start and End IPs as 192.168.1.60 and 192.168.1.62 respectively, the network will only have 3 devices with IPs as 192.168.1.60...61...62.
+    Step 5: Primary and secondary DNS are the DNS that will be used instead of SUBISU's DNS. 
+    Client's may use this DNS to increase speed, block ads in network etc.
+    Step 6: You can add devices that need Static IPs in this place. 
+    Some devices like servers, IP cameras that require port forwarding needs to be added here ass well to provide them a static private IP 
+    (*Note: This is just to provide a static private and not public IP. Public static IPs have to be bought. Esc to sales)
+
+
+    ****** Changing IP mode and Vlan ID *********
+    Network > WAN
+    Step 1: In the IP mode tab you can select the IP mode for the ONU.
+    (IPv4 just uses the version 4 IP address. This may ease some issues caused by IPv6 addresses)
+    (IPv4 and IPv6 uses both the version 4 and version 6 addressing. Use this to accept both IPv4 and IPv6 addresses)
+    (IPv6 uses just the IPv6 addresses. Don't use this as not everything in the web is compatible with IPv6 addresses)
+    Step 2: Sometimes you may need to change the VLAN, you can do this from the VLAN ID segment in this TAB. 
+
+    ****** Wireles 2.4GHz or 5Ghz configuration ******
+    Network > Wireless 2.4GHz OR Network > Wireless 5GHz
+    Step 1: The first enable switch specifies if the band is enabled or not.
+    Step 2: The bandwidth option can be used to change bandwidth. 
+    (Higher bandwidths allow more throughput and speed but are more susceptible to interferance and channel collision)
+    Step 3: The channel option is used to change channels.
+    Step 4: The total max user option can be used to limit the number of users.
+    Step 5: The Nokia ONU supports upto 4 SSID which means the router can make upto 4 wifi. Using the SSID select you can choose from those 4 SSID options.
+    Step 6: The SSID name is the name of the Wi-Fi.
+    Step 7: Using the enable SSID option you can enable or disable among the 4 SSIDs.
+    Step 8: The SSID broadcast option enables or disables the SSID name broadcast. You can disable this to hide your Wi-Fi's name.
+    Step 9: The Isolation option lets you enable or disable devices on same network taling with each other. May be useful for offices.
+    Step 10: The MAX user option marks the number of users that particular SSID can handle.
+    Step 11: The encrytion mode, WPA version, WPA encrytion mode are used for security.
+    (WPA2 and WPA3 are more secure and are encouraged to be used.)
+    (WPA-Personal makes a WiFi name that can be connected through a password)
+    (WPA-Enterprise you can make a username and password for each users mostly useful in hotels and offices)
+
+    ****** Change Firewall Security or Filter MAC *****
+    Security > Firwewall OR Security > MAC Filter
+    Step 1: Change the security level to OFF if you want to unblock calls or other services. High/Low otherwise.
+    Step 2: In the Mac filter Tab, you can block devices from the ethernet or Wifi using the device MAC address.
+    Step 3. The MAC filter mode says if the selected devices should be blocked or allowed.
+    Step 4: The LAN port can be specified to block devices from certain LAN port.
+            The SSID select option can be used to select the SSID to block devices from.
+    Step 5: In the MAC address option you can select the devices to block or approve. The devices can be selected from the dropdown or manullay adding the MAC address.
+    Step 6: Save
+
+    ****** Changing the Gateway Password, rebooting and resetting the ONU ******
+    Maintenance > Password OR Maintenance > Reboot/Factory default
+    Step 1: Change the Password of the GPON home gateway from the option password by entering old password and new password.
+    Step 2: Reboot the ONU from the reboot tab
+    Step 3: Reset the ONU from the Factory default tab
+
+
+    ****** Port Forwarding *******
+    Application > Port Forwarding
+    Step 1: In the Application name, port forwarding for certain application is already an option. 
+    Step 2: WAN port option specifies the external port number on the router's WAN (Wide Area Network) interface that you want to open for incoming traffic. This is the port number that external devices will use to connect to your internal service.
+    Step 3: The LAN port option specifies the port number on your internal device (located within your local network) that the incoming traffic will be directed to.
+    (Eg: If you want to stream video from the camera using the Real-Time Streaming Protocol (RTSP), the default RTSP port is usually 554)
+    (The LAN port should be 554 or the port your camera's RTSP service is configured to use)
+    (The WAN port can be anything. The static IP and this port will be used to access the camera video stream from outside. Common practise is keeping the WAN port as 554 as well)
+    Step 4: The Internal Client option is used to select which device will receive the traffic in that port. 
+    (Select the camera's IP for above example)
+    Step 5: Most of the services use TCP except some streaming or gaming which might use UDP
+    Step 6: Enabling mapping option activates the port forwarding rule and allows the router to forward incoming traffic on the specified WAN port to the corresponding LAN port and internal client. In simple words, enable this.
+    Step 7: Add any description of the port forwarding if you want.
+
     '''
     output_box.config(state=tk.NORMAL)  # make the widget editable
     output_box.delete('1.0', tk.END)  # clear previous content
@@ -334,7 +473,16 @@ def onu_solution():
 
 def onu_terms():
     terms_onu='''
-    1. 
+    1.Port forwarding =>
+                Port forwarding is a networking technique that allows external devices or users to access specific services or applications hosted on devices within a local network 
+    
+    2. MAC address =>
+                A MAC address is a unique identifier assigned to a network device's hardware interface for communication within a local network.
+
+    3. VLAN => 
+            A VLAN (Virtual Local Area Network) is a network segmentation technique that separates a physical network into multiple logical networks, enhancing security and efficiency.
+
+    4. 
     '''
     output_box.config(state=tk.NORMAL)  # make the widget editable
     output_box.delete('1.0', tk.END)  # clear previous content
@@ -343,8 +491,7 @@ def onu_terms():
 
 def onu_cause():
     the_cause_onu='''
-    1. The need of longer range makes client want a secondary router
-        
+    1. Various reasons....        
     '''
     output_box.config(state=tk.NORMAL)  # make the widget editable
     output_box.delete('1.0', tk.END)  # clear previous content
@@ -363,7 +510,10 @@ def onu_more():
 
 def second_solution():
     the_solution_second='''
-    Step 1: 
+    Step 1: Find the IP address of the secondary router. Its given on the back of the router or in the Home Networking Section in our ONU.
+    Step 2: You can change the IP address of the router by finding the option that says IP address.
+    Step 3: You can change the router password and name from the Wireless Security and Wireless Name option.
+    Step 4: Turn off the DHCP server option otherwise it may cause problems with the DHCP server of the Nokia ONU.
     '''
     output_box.config(state=tk.NORMAL)  # make the widget editable
     output_box.delete('1.0', tk.END)  # clear previous content
@@ -373,7 +523,10 @@ def second_solution():
 
 def second_terms():
     terms_second='''
-    1. 
+    1. DHCP, or Dynamic Host Configuration Protocol => 
+                It is a network protocol that automates the process of assigning IP addresses, subnet masks, gateway addresses, and other network configuration settings to devices within a network. It allows devices to join a network and obtain necessary network parameters without manual configuration, streamlining network management and facilitating efficient use of IP addresses.
+
+    2. 
     '''
     output_box.config(state=tk.NORMAL)  # make the widget editable
     output_box.delete('1.0', tk.END)  # clear previous content
