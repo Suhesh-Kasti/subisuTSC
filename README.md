@@ -36,6 +36,7 @@ pyinstaller
 2. Open a terminal where you want this project to exist
 3. Run the following commands:
    ```
+   git clone https://github.com/Suhesh-Kasti/subisuTSC.git
    cd subisuTSC/
    pip install -r requirements.py
    ```
