@@ -4,7 +4,7 @@ An application for learners at Subisu TSC
 ## Installation
 ### Linux
 1. Download the binary from the releases tab.
-2. Make the binary excutable either from the GUI or `chmod +s Subisu`
+2. Make the binary excutable either from the GUI or `chmod +x Subisu`
 3. Execute the binary.
 
 ### Windows
